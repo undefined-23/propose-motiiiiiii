@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#09060d">
+  <meta name="description" content="A little world made for motiiiiiiiiiii ❤️">
+  <title>For Motiiiiiiiiiii ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="loader" class="loader"><div class="loader-heart">♥</div><p>Making a little world for you...</p></div>
+
+  <audio id="bgMusic" loop preload="auto" src="assets/gerua.mp3"></audio>
+  <button id="musicBtn" class="music-btn hidden" aria-label="Toggle music">♫ <span>Music</span></button>
+
+  <main id="app" class="hidden">
+    <!-- INTRO -->
+    <section class="scene hero" id="intro">
+      <div class="stars"></div><div class="glow glow-a"></div><div class="glow glow-b"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow">A little world made for</p>
+        <h1>motiiiiiiiiiii<span>❤️</span></h1>
+        <p class="subtitle">Don't rush this. Every little part is for you.</p>
+        <button class="primary-btn begin" data-next="story">Begin Our Story <span>→</span></button>
+        <p class="tiny">🎧 Headphones recommended</p>
+      </div>
+    </section>
+
+    <!-- 23 JULY -->
+    <section class="scene paper" id="story">
+      <div class="chapter">Chapter I</div>
+      <div class="date-card reveal">
+        <span class="date-small">23</span><span class="date-line"></span><span class="date-small">07</span>
+        <h2>Some dates are just dates.</h2>
+        <p>And then there are dates that quietly change everything.</p>
+        <strong>23rd July.</strong>
+        <p class="soft">That's where our little story began.</p>
+      </div>
+      <button class="ghost-btn" data-next="moments">Keep going ↓</button>
+    </section>
+
+    <!-- EVERY MOMENT -->
+    <section class="scene memories" id="moments">
+      <div class="chapter">Chapter II</div>
+      <h2 class="section-title">Every Moment</h2>
+      <p class="section-lead">You asked for reasons. I tried to count them.</p>
+      <div class="reason-stack">
+        <article class="reason-card"><span>01</span><p>One moment?</p><b>Impossible.</b></article>
+        <article class="reason-card"><span>02</span><p>Five reasons?</p><b>Still impossible.</b></article>
+        <article class="reason-card"><span>03</span><p>A list of everything I love?</p><b>There isn't a limit.</b></article>
+      </div>
+      <p class="center-note">It's every little thing you do. ❤️</p>
+      <button class="primary-btn" data-next="august">There is one date...</button>
+    </section>
+
+    <!-- 31 AUGUST -->
+    <section class="scene august" id="august">
+      <div class="chapter">Chapter III</div>
+      <div class="date-reveal">
+        <p class="date-label">31 • 08</p>
+        <div class="august-copy">
+          <p>Some dates don't need a long explanation.</p>
+          <p>Because you remember exactly how they felt.</p>
+          <div class="divider"></div>
+          <h2>That was the day we both knew.</h2>
+          <p>The feelings weren't one-sided.</p>
+          <p class="emphasis">They were ours.</p>
+          <p>And somewhere between all those conversations, care, understanding and little moments...</p>
+          <h3>we found <em>“us.”</em> ❤️</h3>
+        </div>
+      </div>
+      <button class="ghost-btn" data-next="distance">Next →</button>
+    </section>
+
+    <!-- DISTANCE -->
+    <section class="scene distance" id="distance">
+      <div class="chapter">Chapter IV</div>
+      <h2 class="section-title">Miles Can't Measure Us</h2>
+      <div class="route">
+        <div class="place"><span class="pin">●</span><b>Bengaluru</b><small>me</small></div>
+        <div class="route-line"><span class="plane">✈</span></div>
+        <div class="place"><span class="pin">●</span><b>Odisha</b><small>you</small></div>
+      </div>
+      <div class="three-pillars">
+        <div><span>♥</span><b>Love</b></div>
+        <div><span>∞</span><b>Understanding</b></div>
+        <div><span>✦</span><b>Little care</b></div>
+      </div>
+      <p class="quote">Different places. Different skies.<br><strong>Same heart.</strong></p>
+      <button class="primary-btn" data-next="motiiii">Meet the girl behind all this →</button>
+    </section>
+
+    <!-- PLAYFUL -->
+    <section class="scene playful" id="motiiii">
+      <div class="chapter">Chapter V</div>
+      <h2 class="section-title">The Motiiiiiiiiiii Files</h2>
+      <p class="section-lead">Tap the hearts. I have evidence. 😌</p>
+      <div class="file-card">
+        <div class="file-head"><span>CASE #SS-LOVE</span><span>100%</span></div>
+        <div class="progress"><i></i></div>
+        <div id="clues" class="clues"></div>
+        <button id="clueBtn" class="primary-btn">Open the next clue ❤️</button>
+      </div>
+      <p id="clueDone" class="done-msg hidden">ERROR: Too many reasons to list. 😂❤️</p>
+      <button id="afterClues" class="ghost-btn hidden" data-next="gallery">Okay, continue →</button>
+    </section>
+
+    <!-- PHOTO STORY -->
+    <section class="scene gallery" id="gallery">
+      <div class="chapter">Chapter VI</div>
+      <h2 class="section-title">A Few Faces of My Favorite Person</h2>
+      <p class="section-lead">Every picture carries a little piece of you.</p>
+      <div class="photo-stack">
+        <figure class="photo-card large"><img src="assets/photo-1.jpg" alt="Sagarika in a pastel green outfit"><figcaption>Somehow, you make beautiful look effortless.</figcaption></figure>
+        <figure class="photo-card tilt-left"><img src="assets/photo-2.jpg" alt="Sagarika outdoors at night"><figcaption>My favorite kind of glow.</figcaption></figure>
+        <figure class="photo-card tilt-right"><img src="assets/photo-3.jpg" alt="Sagarika in a black traditional outfit"><figcaption>And that smile... ❤️</figcaption></figure>
+        <figure class="photo-card"><img src="assets/photo-4.jpg" alt="Sagarika in a black outfit"><figcaption>There is always something about you.</figcaption></figure>
+        <figure class="photo-card tilt-left"><img src="assets/photo-5.jpg" alt="Sagarika in blue outdoors"><figcaption>Even ordinary places look better with you in them.</figcaption></figure>
+        <figure class="photo-card"><img src="assets/photo-6.jpg" alt="Sagarika walking in a garden"><figcaption>My person. My peace.</figcaption></figure>
+        <figure class="photo-card tilt-right"><img src="assets/photo-7.jpg" alt="Sagarika sitting in a garden"><figcaption>And yes... I'm still not done admiring you.</figcaption></figure>
+      </div>
+      <button class="primary-btn" data-next="secret">There is something hidden here...</button>
+    </section>
+
+    <!-- SECRET -->
+    <section class="scene secret" id="secret">
+      <div class="chapter">A little secret</div>
+      <div class="secret-space">
+        <p class="hint">Look closely. ✨</p>
+        <button id="diamond" class="diamond" aria-label="Hidden message">◆</button>
+        <div id="secretCard" class="secret-card hidden">
+          <div class="secret-image"><img src="assets/photo-1.jpg" alt="Sagarika"><span>♥</span></div>
+          <div class="secret-text">
+            <p>You know what I think?</p>
+            <p>You are the best person I've met.</p>
+            <p>Not because you're perfect.</p>
+            <p>But because of the way you love, care, understand and respect me.</p>
+            <h3>You are one of the most precious diamonds life has given me. ❤️</h3>
+          </div>
+          <button class="primary-btn" data-next="flight">Take me to the final journey →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLIGHT -->
+    <section class="scene flight" id="flight">
+      <div class="chapter">Final Journey</div>
+      <div class="flight-card">
+        <div class="airline">✈ SANGRAM AIRLINES</div>
+        <div class="flight-no">SS-143</div>
+        <div class="flight-row"><span>PASSENGER</span><b>MISS SAGARIKA</b></div>
+        <div class="flight-row"><span>FROM</span><b>BENGALURU</b></div>
+        <div class="flight-row"><span>TO</span><b>THE PLACE BEYOND DISTANCE ❤️</b></div>
+        <div class="boarding">BOARDING</div>
+        <button id="boardBtn" class="primary-btn">Board Now ✈️</button>
+      </div>
+      <div id="flightSky" class="flight-sky hidden"><div class="flight-plane">✈</div><p>Your final destination is waiting...</p><button class="primary-btn" data-next="sky">Continue →</button></div>
+    </section>
+
+    <!-- SKY -->
+    <section class="scene sky" id="sky">
+      <div class="stars interactive-stars" id="interactiveStars"></div>
+      <div class="chapter">Chapter VII</div>
+      <h2 class="section-title">Our Little Sky</h2>
+      <p class="section-lead">Tap the stars. A few things I want you to know.</p>
+      <div class="star-message" id="starMessage">✨ Choose a star</div>
+      <button class="primary-btn hidden" id="skyContinue" data-next="final">There is one last thing...</button>
+    </section>
+
+    <!-- FINAL -->
+    <section class="scene final" id="final">
+      <div class="final-glow"></div>
+      <div class="final-copy">
+        <p class="type-line" data-delay="0">Sagarika...</p>
+        <p class="type-line" data-delay="1300">motiiiiiiiiiii...</p>
+        <p class="type-line" data-delay="2900">We've already shared so many moments.</p>
+        <p class="type-line" data-delay="4700">We've already crossed distance.</p>
+        <p class="type-line" data-delay="6500">And we've understood each other in ways words can't always explain.</p>
+        <p class="type-line big" data-delay="8500">So I want to ask you something...</p>
+        <div class="proposal hidden" id="proposal">
+          <p>Are you ready...</p>
+          <h1>for the upcoming<br><span>7 janmas?</span></h1>
+          <p class="tiny-proposal">Na na...</p>
+          <h2>100 YEARS? ❤️</h2>
+          <p class="question">Will you choose me?</p>
+          <button id="yesBtn" class="yes-btn">YES ❤️</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- YES -->
+    <section class="scene celebration hidden" id="celebration">
+      <div id="loveRain"></div>
+      <div class="celebrate-content">
+        <p>Then I guess...</p>
+        <h1>our next chapter<br>starts here. ❤️</h1>
+        <div class="ss-heart">S + S <span>♥</span></div>
+        <p class="celebrate-small">Love U ❤️ &nbsp; Love U ❤️ &nbsp; Love U ❤️</p>
+        <p class="celebrate-small">100 years sounds like a good start. 😌</p>
+      </div>
+    </section>
+    <section id="personal-letter" class="section">
+    <div class="letter-container">
+
+        <p class="letter-intro">
+            Before I ask you something...
+        </p>
+
+        <div class="love-letter">
+            <div class="love-letter">
+
+    <p>A random day and random incident</p>
+
+    <p>
+        Me 🗣️: Hoi mane achhi t be ready for future 70 yr na be actual re ichha ta future 100 janma pain....🙂‍↔️<br>
+        But kalpana duniya re 100 janma banchiba apekhya mu to sh sei 70 ki 80 yr banchiba pasand karibi
+    </p>
+
+    <p>
+        [Kain na mate laguchi ama prema jadi setiki pure au unconditional heithiba ame duhen duhin ku next janma re khojiki paijibaa be]
+    </p>
+
+    <p>
+        She 🗣️- He neigala baki sabu tk life tmr..🌝
+    </p>
+
+    <p>
+        (What a line 🤌 babyyyy✨...⚡⚡)
+    </p>
+
+    <p>
+        Dekh mu janini kemiti kn , mu bhabi hin nathili mane eibhalia kichhi heba ....🫠
+    </p>
+
+    <p>
+        Se jou kuhantini sabu uparu system heiki ase seta sata be ae dekhunu ama kth...🤌
+    </p>
+
+    <p>
+        Motiiiiiiiiiii ♥️ tu hue ta janinu tu mo pain kn<br>
+        Au hn mate b dara Lage be tate janeibaku<br>
+        Kain na mu kouthu gte sunithili ki Tume jadi kahaku tuma agare thiba value janeidia ya tuma week point janeidia , ta semane time asile sei week point ku nei tte hurt karanti be....🥹
+    </p>
+
+    <p>
+        Mu chanhe tu mo Strong point ha but mana re kichhi ta bhaya asijae ki jemti
+    </p>
+
+    <p>
+        "Yaku mu harei debini ta....?<br>
+        Jadi harei die Rahiparibi ta....?<br>
+        Se mo sh bata chali pariba ta....?<br>
+        Mu taku khusire rakhi paribi ta....?<br>
+        .<br>
+        .<br>
+        .<br>
+        Emiti anek gudae kth"
+    </p>
+
+    <p>
+        Sabu thu adhika tension die kou kth janichu Jadi yaku mu harei die mo abastha kn heba 🥺<br>
+        Bhai biswas kar e kth bhabila belaku deha kn heijaichu be...
+    </p>
+
+    <p>
+        Mate lage tu mo jibana ra emiti gte page jahaku mu livei paribini chhada bhabi b parini mane Bhai special be ✨
+    </p>
+
+    <p>
+        Hn bele bele mte lage mu tte nei jou level re rakhichi se type ra special feel karei asena be
+    </p>
+
+    <p>
+        Mo Theory kn janichu mane mu blv kare ki
+    </p>
+
+    <p>
+        Dekh normally tu kahibu mane jahaku b kahibu se janiba mane se to language ru bujhila mane tu kahila pare se bujhilaa dekh eta ta genuine na tu jahaku b jaha kahibu se suniba n bujhiba b
+    </p>
+
+    <p>
+        But mo anusare mu express kariba pain mana karuni but vl paiba ei level re heithiba darakar ki paraspara ku kahibaku padunathiba mane se feel kariparuthiba ki bujhi paruthiba to mana katha
+    </p>
+
+    <p>
+        Dekh tte ei kth filmy lagi pare but mo hisab re ta atleast ae bhalia heba darkar...😌
+    </p>
+
+    <p>
+        Tu bodhe hue sei feel karithibu asa....
+    </p>
+
+    <p>
+        Dekh eta ta genuine kth na ki mu kahibi mu tte ete vl pae eya karidebi seya karidebi janha tara anidebii....
+        (Loka kuhanti dekhibaa setebele lahuthilu janha tara kth kain aniki dekheiluu
+        Ire bhai ta mane nuhen ki janha tara nei asibaa ta vl paibaa )
+        Ta jie nai se bujhiba but se samna bala ra munha ru suni sarila pare bujhiba...
+    </p>
+
+    <p>
+        But mu chanhe ki mu tte kichhi kahiba agaru tte feel karei paruthiba darkar
+        mu chanhena ki mu tte kahiba pare tu suniki bujh mu chanhe ki ama vl paibaa ku sei level paryanta neba ki jouthi paraspara ra munha ru kth suniba purbaru munha dekhi janiparuthiba darkar.....🫠
+    </p>
+
+    <p>
+        Mate express kari asena be adjust karidebuuu tk
+        Bhabibuni kebe ki ttte vl pauni ki eya seya faltu kth mane rakhithibu always High Priority be....
+    </p>
+
+    <p>
+        Janithibu ta au kete santa sistha bhadra namra chhua te be mu..😗
+    </p>
+
+    <p>
+        Auu kn kahibi hun hun hun hun 🤣
+    </p>
+
+    <p>
+        Love uuuuuuu ❤️
+    </p>
+
+</div>
+        </div>
+
+        <p class="letter-signature">
+            — Sangram ❤️
+        </p>
+
+        <button onclick="nextSection()">
+            One Last Thing ❤️
+        </button>
+
+    </div>
+</section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
